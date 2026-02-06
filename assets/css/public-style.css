@@ -1,0 +1,392 @@
+/**
+ * Public Styles for e-Governance Complaint Portal.
+ *
+ * Styling for complaint forms, citizen dashboard, and tracking.
+ */
+
+/* ==========================================================================
+   General Styles
+   ========================================================================== */
+
+.egcp-complaint-form-wrapper,
+.egcp-my-complaints-wrapper,
+.egcp-track-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Form Header */
+.egcp-form-header {
+    margin-bottom: 30px;
+}
+
+.egcp-form-header h2 {
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 28px;
+}
+
+.egcp-form-description {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   Form Styles
+   ========================================================================== */
+
+.egcp-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.egcp-form-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.egcp-form-section:last-of-type {
+    border-bottom: none;
+}
+
+.egcp-form-section h3 {
+    margin: 0 0 20px;
+    color: #2c3e50;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.egcp-form-section h3 small {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #95a5a6;
+    font-weight: normal;
+}
+
+/* Form Rows */
+.egcp-form-row {
+    margin-bottom: 20px;
+}
+
+.egcp-form-row-half {
+    display: flex;
+    gap: 20px;
+}
+
+.egcp-form-col {
+    flex: 1;
+}
+
+/* Labels */
+.egcp-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+/* Input Fields */
+.egcp-form input[type="text"],
+.egcp-form input[type="email"],
+.egcp-form input[type="tel"],
+.egcp-form select,
+.egcp-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.egcp-form input[type="text"]:focus,
+.egcp-form input[type="email"]:focus,
+.egcp-form input[type="tel"]:focus,
+.egcp-form select:focus,
+.egcp-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.egcp-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.egcp-help-text {
+    display: block;
+    margin-top: 5px;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+/* File Input */
+.egcp-form input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Image Upload Preview
+   ========================================================================== */
+
+.egcp-image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.egcp-image-item {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid #e0e0e0;
+    transition: opacity 0.3s;
+}
+
+.egcp-image-item.uploading {
+    opacity: 0.5;
+}
+
+.egcp-image-item.uploaded {
+    border-color: #27ae60;
+}
+
+.egcp-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.egcp-remove-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    transition: background 0.3s;
+}
+
+.egcp-remove-image:hover {
+    background: #c0392b;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.egcp-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.egcp-btn-primary {
+    background: #3498db;
+    color: #fff;
+}
+
+.egcp-btn-primary:hover {
+    background: #2980b9;
+}
+
+.egcp-btn-secondary {
+    background: #95a5a6;
+    color: #fff;
+}
+
+.egcp-btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+.egcp-btn-large {
+    padding: 15px 40px;
+    font-size: 16px;
+}
+
+.egcp-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.egcp-form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* ==========================================================================
+   Notices / Messages
+   ========================================================================== */
+
+.egcp-notice {
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.egcp-notice-success {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+}
+
+.egcp-notice-error {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+
+.egcp-notice-warning {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+}
+
+.egcp-notice p {
+    margin: 5px 0;
+}
+
+.egcp-grievance-id {
+    font-weight: 700;
+    font-size: 16px;
+    color: #2c3e50;
+    background: #ecf0f1;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* ==========================================================================
+   SLA Badges
+   ========================================================================== */
+
+.egcp-sla-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.egcp-sla-within {
+    background: #d4edda;
+    color: #155724;
+}
+
+.egcp-sla-urgent {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.egcp-sla-overdue {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.egcp-sla-resolved {
+    background: #cce5ff;
+    color: #004085;
+}
+
+/* ==========================================================================
+   Status Badges
+   ========================================================================== */
+
+.egcp-status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.egcp-status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.egcp-status-approved {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.egcp-status-in_progress {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.egcp-status-resolved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.egcp-status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.egcp-status-escalated {
+    background: #f5c6cb;
+    color: #a71d2a;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .egcp-form-row-half {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .egcp-form-actions {
+        flex-direction: column;
+    }
+
+    .egcp-btn {
+        width: 100%;
+    }
+
+    .egcp-image-preview {
+        justify-content: center;
+    }
+}
